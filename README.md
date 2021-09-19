@@ -3,8 +3,7 @@
 2) cd ml-30
 3) create and activate venv in any convenient way
 4) python3 -m pip install -r requirements.txt
-5) python -m spacy download ru_core_news_lg
-6) run command:
+5run command:
 
 *python .\html2vec.py D:\vk.html D:\alpha.html*
 
