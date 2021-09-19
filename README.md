@@ -3,7 +3,7 @@
 2) cd ml-30
 3) create and activate venv in any convenient way
 4) python3 -m pip install -r requirements.txt
-5run command:
+5) run command:
 
 *python .\html2vec.py D:\vk.html D:\alpha.html*
 
