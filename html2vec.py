@@ -184,4 +184,4 @@ if __name__ == "__main__":
         com = compare_html(html1, html2)
         # print(com)
         print('Similarity: ', np.array(list(com.values())).mean())
-        print('If similarity lower than 50_000 then websites are alike')
+        print('If similarity lower than 80_000 then websites are alike')
