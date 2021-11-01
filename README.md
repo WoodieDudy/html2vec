@@ -1,35 +1,37 @@
 # ML-30
-1) git clone https://github.com/WoodieDudy/html2vec.git
-2) cd ml-30
-3) create and activate venv in any convenient way
-4) python3 -m pip install -r requirements.txt
-5) run command:
 
-*python .\html2vec.py D:\vk.html D:\alpha.html*
+## Install
+```
+git clone https://github.com/WoodieDudy/html2vec.git
+cd ml-30
+```
+Create and activate venv in any convenient way
+```
+python3 -m pip install -r requirements.txt
+```
+
+## Run
+```
+python3 .\html2vec.py D:\vk.html D:\alpha.html
+```
 
 If you specify one path, then it will return a dictionary, where the keys are tags, and the values are vectors.
 If you pass two paths, then their similarity will return to you.
-If similarity lower than 50_000 then websites are alike
-
-or look on demo30.mkv
-
+If similarity lower than 80_000 then websites are alike
 
 
 
 # ML-40
-1) run command:
-*python .\fake_page.py -f "path to html"*
+## Run
+```
+python3 .\fake_page.py -f "path to html"
+```
 
-Or look on demo40.mkv
-
-
-Дальше по английски не могу)
-
-Каждую html страничку алгоритм разбивает на тэги (ноды).
-Для каждого нода он выделяет пять свойств: название тэга,
-текст внутри него, атрибуры тэга, цифровая позиция в коде,
-полный путь до тэга. Дальше каждое текстовое значение в параментрах
-превращает в вектор (для русского текста использует русскую модель, а для английского модель ориентированную на код).
-Дальше для каждого тега вычесляется его средний вектор. Это можно считать вектором страницы (словарем векторов). Потом вычисляет расстояние между одинаковыми тегами
-в данных на врод html страницах. Это уже можно считать готовой метрикой, но для наглядности превращается в одно число.
-Страницы можно считать похожими, если их difference меньше 80_000
+The algorithm divides each html page into tags (nodes).
+For each node, it is distinguished by five properties: the name of the tag,
+text inside it, tag attributes, numeric position in the code,
+full path to the tag. Further, each text value in the parameters
+turns into a vector (for Russian text it uses the Russian model, and for English it uses the code oriented model).
+Further, for each tag, its average vector is calculated. This can be thought of as a page vector (a dictionary of vectors). Then calculates the distance between the same tags
+in data on html pages. This can already be considered a ready-made metric, but for clarity it turns into one number.
+Pages can be considered similar if their difference is less than 80_000
